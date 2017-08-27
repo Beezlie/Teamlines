@@ -1,6 +1,10 @@
 import psycopg2
 from config import config
 
+### Player name, team and twitter handle stored in DB.
+### Results are stored in the event that the Twitter rate limit is reached
+### and the app's Twitter lists can no longer be updated using the Tweepy API
+
 def create_tables():
     conn = None
     try:
