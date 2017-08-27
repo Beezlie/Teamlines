@@ -1,7 +1,11 @@
 from bs4 import BeautifulSoup
-from twitter_scrape import populate_handles
+from twitter_funcs import populate_handles
 from unidecode import unidecode  #library used to convert unicode characters in player's names to ASCII
 import urllib2
+import logging 
+
+logging.basicConfig(filename='teamlines.log', level=logging.ERROR)
+#TODO add error handling and logging to this
 
 class Athlete:
     def __init__(self, name, team, twitter_handle):
@@ -39,6 +43,7 @@ def nba_scrape(wiki, twitacct, player_dict):
                     full_name = unidecode(first_name + (" ") + last_name) #convert to ASCII                    
                     player_dict[full_name] = Athlete(full_name, team, "None")
 
+
     #scrape NBA twitter handle page for player names and their teams
     for row in twit_soup.find_all("tr"):
         cells = row.find_all("td")
@@ -51,7 +56,7 @@ def nba_scrape(wiki, twitacct, player_dict):
                 player_dict[name].twitter_handle = twitter_handle
 
     # populate dict with twitter handles using a call to the Twitter API with Tweepy
-#    player_dict = populate_handles(player_dict, 'NBAplayers', 'nba-players')
+    player_dict = populate_handles(player_dict, 'NBAplayers', 'nba-players')
 
     # copy to new dictionary - removes players that do not have twitter accounts
     for i in player_dict:
@@ -92,19 +97,15 @@ def mlb_scrape(wiki, twitacct, player_dict):
             if name in player_dict:
                  twitter_handle = info[1]
                  player_dict[name].twitter_handle = twitter_handle
-    
-    #print statement for testing
-#    for i in copy_dict:
-#       print(i, copy_dict[i].name, copy_dict[i].team)
-
+  
     # populate dict with twitter handles using a call to the Twitter API with Tweepy
-#    player_dict = populate_handles(player_dict, 'MLB', 'players1')
+    player_dict = populate_handles(player_dict, 'MLB', 'players1')
 
     # copy to new dictionary - removes players that do not have twitter accounts
     for i in player_dict:
         if player_dict[i].twitter_handle is not "None":
             copy_dict[i] = player_dict[i]
-    
+
     return copy_dict
 
 def nhl_scrape(wiki, player_dict):
@@ -136,7 +137,7 @@ def nhl_scrape(wiki, player_dict):
                         player_dict[full_name] = Athlete(full_name, team, "None")
 
     # populate dict with twitter handles using a call to the Twitter API with Tweepy
-#    player_dict = populate_handles(player_dict, 'NHL', 'nhl-players')
+    player_dict = populate_handles(player_dict, 'NHL', 'nhl-players')
 
     # copy to new dictionary - removes players that do not have twitter accounts
     for i in player_dict:
