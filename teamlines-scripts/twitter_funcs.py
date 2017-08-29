@@ -3,6 +3,8 @@ import logging
 from config import config
 from unidecode import unidecode
 
+#TODO fix the add_list_members call (Tweepy error code 25)
+
 logging.basicConfig(filename='teamlines.log', level=logging.ERROR)
 
 # read authentication parameters
@@ -30,42 +32,42 @@ def populate_handles(player_dict, user, slug):
         #if current player (listed in wikipedia roster) then add Twitter handle to associated Athlete object
         if name in player_dict:
             player_dict[name].twitter_handle = member.screen_name
-
     return player_dict
 
 #update Teamlines Twitter list
 def update_twlist(player_dict):
     twlist = api.lists_all()
+    twlist_teams = dict()    # key = name, value = id
+    twlist_players = dict()  #key = list_id, value = list of players
 
     #get all lists belonging to Teamlines app
-    twlist_names = list()    
-    twlist_dict = dict()
-    
     for member in twlist:
-        twlist_names.append(member.name)
-        twlist_dict[member.name] = member.id
+        twlist_teams[member.name] = member.id
+        twlist_players[member.id] = []
         #note - only able to delete 100 lists at a time
         #api.destroy_list(list_id=member.id)
 
     for player in player_dict:
         #create twitter list for any new teams
-        if player_dict[player].team not in twlist_names:
-            twlist_names.append(player_dict[player].team)
+        team = player_dict[player].team
+        handle = player_dict[player].twitter_handle
+        if team not in twlist_teams:
             try:
-                logging.info("Creating list: %s", player_dict[player].team)
-                new_list = api.create_list(player_dict[player].team)
-                twlist_dict[new_list.name] = new_list.id
+                logging.info("Creating list: %s", team)
+                new_list = api.create_list(team)
+                twlist_teams[team] = new_list.id
+                twlist_players[new_list.id] = []
             except Exception, e:
-                logging.error("Unable to create list: %s", player_dict[player].team)
-                print(e)
+                logging.error("Unable to create list: %s", team)
+                logging.error(e)
+        
         #add player to twitter list
-        list_id = twlist_dict[player_dict[player].team]
-        #need to check if player is already in list before adding (due to limit on # players that can be added)
-
-'''
+        twlist_players[twlist_teams[team]].append(handle.encode('ascii','ignore')) 
+    
+    #bulk add all players for each team to the associated twitter list
+    for list_id in twlist_players:
         try:
-            api.add_list_member(screen_name=player_dict[player].twitter_handle, list_id=list_id) 
+            api.add_list_members(list_id=list_id, screen_name=twlist_players[list_id])
         except Exception, e:
-            logging.error("Unable to add %s with screen_name %s to list %s",  player_dict[player].name, player_dict[player].twitter_handle, player_dict[player].team)
-            print(e)
-'''            
+            logging.error("Unable to add players to list id: %u", list_id)
+            logging.error(e)

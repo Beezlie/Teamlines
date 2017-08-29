@@ -6,7 +6,7 @@ import logging
 
 logging.basicConfig(filename='teamlines.log', level=logging.ERROR)
 #TODO add error handling and logging to this
-
+#TODO fix nhl_scrape (only getting some of the players)
 class Athlete:
     def __init__(self, name, team, twitter_handle):
         self.name = name
@@ -134,6 +134,8 @@ def nhl_scrape(wiki, player_dict):
 #                        if name[1].find("\xa0") != -1:
 #                            first_name = name[1].split("\xa0", 1)[0]
                         full_name = unidecode(first_name + (" ") + last_name)  # convert to ASCII
+                        print(full_name)
+                        print(team)
                         player_dict[full_name] = Athlete(full_name, team, "None")
 
     # populate dict with twitter handles using a call to the Twitter API with Tweepy
