@@ -2,8 +2,8 @@
     <string name="app_name">Teamlines</string>
     <string name="action_settings">Settings</string>
 
-    
-    <!--MLB teams-->
+
+    <!--MLB team names-->
     <string name="arizona_diamondbacks">Arizona Diamondbacks</string>
     <string name="atlanta_braves">Atlanta Braves</string>
     <string name="baltimore_orioles">Baltimore Orioles</string>
@@ -35,9 +35,44 @@
     <string name="toronto_blue_jays">Toronto Blue Jays</string>
     <string name="washington_nationals">Washington Nationals</string>
 
+    <!--MLB twitter list slugs-->
+    <string name="arizona_diamondbacks_slug">arizona-diamondbacks</string>
+    <string name="atlanta_braves_slug">atlanta-braves</string>
+    <string name="baltimore_orioles_slug">baltimore-orioles</string>
+    <string name="boston_red_sox_slug">boston-red-sox</string>
+    <string name="chicago_white_sox_slug">chicago-white-sox</string>
+    <string name="chicago_cubs_slug">chicago-cubs</string>
+    <string name="cincinnati_reds_slug">cincinnati-reds</string>
+    <string name="cleveland_indians_slug">cleveland-indians</string>
+    <string name="colorado_rockies_slug">colorado-rockies</string>
+    <string name="detroit_tigers_slug">detroit-tigers</string>
+    <string name="houston_astros_slug">houston-astros</string>
+    <string name="kansas_city_royals_slug">kansas-city-royals</string>
+    <string name="los_angeles_angels_slug">los-angeles-angels</string>
+    <string name="los_angeles_dodgers_slug">los-angeles-dodgers</string>
+    <string name="miami_marlins_slug">miami-marlins</string>
+    <string name="milwaukee_brewers_slug">milwaukee-brewers</string>
+    <string name="minnesota_twins_slug">minnesota-twins</string>
+    <string name="new_york_mets_slug">new-york-mets</string>
+    <string name="new_york_yankees_slug">new-york-yankees</string>
+    <string name="oakland_athletics_slug">oakland-athletics</string>
+    <string name="philadelphia_phillies_slug">philadelphia-phillies</string>
+    <string name="pittsburgh_pirates_slug">pittsburgh-pirates</string>
+    <string name="san_diego_padres_slug">san-diego-padres</string>
+    <string name="san_francisco_giants_slug">san-francisco-giants</string>
+    <string name="seattle_mariners_slug">seattle-mariners</string>
+    <string name="st_louis_cardinals_slug">st-louis-cardinals</string>
+    <string name="tampa_bay_rays_slug">tampa-bay-rays</string>
+    <string name="texas_rangers_slug">texas-rangers</string>
+    <string name="toronto_blue_jays_slug">toronto-blue-jays</string>
+    <string name="washington_nationals_slug">washington-nationals</string>
+
     <!--Leagues-->
     <string name="nba">NBA</string>
     <string name="nhl">NHL</string>
     <string name="mlb">MLB</string>
+
+    <!--Twitter list owner-->
+    <string name="twitter_list_owner">MDias9</string>
 
 </resources>

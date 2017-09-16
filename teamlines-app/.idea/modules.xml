@@ -4,8 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Teamlines Android.iml" filepath="$PROJECT_DIR$/Teamlines Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/teamlines-android.iml" filepath="$PROJECT_DIR$/teamlines-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teamlines-app.iml" filepath="$PROJECT_DIR$/teamlines-app.iml" />
     </modules>
   </component>
 </project>

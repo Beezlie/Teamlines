@@ -7,6 +7,7 @@ import logging
 logging.basicConfig(filename='teamlines.log', level=logging.ERROR)
 #TODO add error handling and logging to this
 #TODO fix nhl_scrape (only getting some of the players)
+
 class Athlete:
     def __init__(self, name, team, twitter_handle):
         self.name = name

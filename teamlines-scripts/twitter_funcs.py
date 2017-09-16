@@ -3,8 +3,6 @@ import logging
 from config import config
 from unidecode import unidecode
 
-#TODO fix the add_list_members call (Tweepy error code 25)
-
 logging.basicConfig(filename='teamlines.log', level=logging.ERROR)
 
 # read authentication parameters

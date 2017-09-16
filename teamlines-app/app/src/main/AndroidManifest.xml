@@ -18,10 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SingleViewActivity"
-            android:label="@string/title_activity_single_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".TimelineActivity"></activity>
     </application>
 
 </manifest>
