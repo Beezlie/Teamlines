@@ -1,4 +1,43 @@
 <resources>
     <string name="app_name">Teamlines</string>
     <string name="action_settings">Settings</string>
+
+    
+    <!--MLB teams-->
+    <string name="arizona_diamondbacks">Arizona Diamondbacks</string>
+    <string name="atlanta_braves">Atlanta Braves</string>
+    <string name="baltimore_orioles">Baltimore Orioles</string>
+    <string name="boston_red_sox">Boston Red Sox</string>
+    <string name="chicago_white_sox">Chicago White Sox</string>
+    <string name="chicago_cubs">Chicago Cubs</string>
+    <string name="cincinnati_reds">Cincinnati Reds</string>
+    <string name="cleveland_indians">Cleveland Indians</string>
+    <string name="colorado_rockies">Colorado Rockies</string>
+    <string name="detroit_tigers">Detroit Tigers</string>
+    <string name="houston_astros">Houston Astros</string>
+    <string name="kansas_city_royals">Kansas City Royals</string>
+    <string name="los_angeles_angels">Los Angeles Angels</string>
+    <string name="los_angeles_dodgers">Los Angeles Dodgers</string>
+    <string name="miami_marlins">Miami Marlins</string>
+    <string name="milwaukee_brewers">Milwaukee Brewers</string>
+    <string name="minnesota_twins">Minnesota Twins</string>
+    <string name="new_york_mets">New York Mets</string>
+    <string name="new_york_yankees">New York Yankees</string>
+    <string name="oakland_athletics">Oakland Athletics</string>
+    <string name="philadelphia_phillies">Philadelphia Phillies</string>
+    <string name="pittsburgh_pirates">Pittsburgh Pirates</string>
+    <string name="san_diego_padres">San Diego Padres</string>
+    <string name="san_francisco_giants">San Francisco Giants</string>
+    <string name="seattle_mariners">Seattle Mariners</string>
+    <string name="st_louis_cardinals">St. Louis Cardinals</string>
+    <string name="tampa_bay_rays">Tampa Bay Rays</string>
+    <string name="texas_rangers">Texas Rangers</string>
+    <string name="toronto_blue_jays">Toronto Blue Jays</string>
+    <string name="washington_nationals">Washington Nationals</string>
+
+    <!--Leagues-->
+    <string name="nba">NBA</string>
+    <string name="nhl">NHL</string>
+    <string name="mlb">MLB</string>
+
 </resources>
