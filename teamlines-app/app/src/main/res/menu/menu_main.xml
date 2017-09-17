@@ -7,25 +7,29 @@
         android:id="@+id/baseball"
         android:icon="@drawable/baseball"
         android:title="@string/mlb"
-        app:showAsAction="ifRoom"/>
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/hockey"
         android:icon="@drawable/hockey"
         android:title="@string/nhl"
-        app:showAsAction="ifRoom"/>
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/basketball"
         android:icon="@drawable/basketball"
         android:title="@string/nba"
-        app:showAsAction="ifRoom"/>
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/football"
         android:icon="@drawable/football"
         android:title="@string/nfl"
-        app:showAsAction="ifRoom"/>
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
 
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
