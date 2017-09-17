@@ -25,15 +25,46 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
+        setSportView(mlbteams);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+    //need to think of a way to pass a different team array based on the league selected and have it refresh the main_activity and use that team instead of default
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.baseball:
+                setSportView(mlbteams);
+                return true;
+            case R.id.hockey:
+                setSportView(nhlteams);
+                return true;
+            case R.id.basketball:
+                return true;
+            case R.id.football:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void setSportView(Team[] teams) {
         GridView gridView = (GridView)findViewById(R.id.gridview);
 
         final TeamsAdapter teamsAdapter = new TeamsAdapter(this, teams);
         gridView.setAdapter(teamsAdapter);
 
+        final Team[] league = teams;
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
-                Team team = teams[position];
+                Team team = league[position];
 
                 //launch new actvity displaying twitter timeline for selected team
                 Intent intent = new Intent(MainActivity.this, TimelineActivity.class);
@@ -44,36 +75,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.baseball:
-                //newGame();
-                return true;
-            case R.id.hockey:
-                //showHelp();
-                return true;
-            case R.id.basketball:
-                //showHelp();
-                return true;
-            case R.id.football:
-                //showHelp();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
     //team name, twitter list slug, league, team logo image resource
-    private Team[] teams = {
+    private Team[] mlbteams = {
             new Team(R.string.arizona_diamondbacks, R.string.arizona_diamondbacks_slug, R.string.mlb, R.drawable.mlb_arizona),
             new Team(R.string.atlanta_braves, R.string.atlanta_braves_slug, R.string.mlb, R.drawable.mlb_atlanta),
             new Team(R.string.baltimore_orioles, R.string.baltimore_orioles_slug, R.string.mlb, R.drawable.mlb_baltimore),
@@ -104,5 +107,10 @@ public class MainActivity extends AppCompatActivity {
             new Team(R.string.texas_rangers, R.string.texas_rangers_slug, R.string.mlb, R.drawable.mlb_texas),
             new Team(R.string.toronto_blue_jays, R.string.toronto_blue_jays_slug, R.string.mlb, R.drawable.mlb_toronto),
             new Team(R.string.washington_nationals, R.string.washington_nationals_slug, R.string.mlb, R.drawable.mlb_washington)
+    };
+
+    private Team[] nhlteams = {
+            new Team(R.string.ottawa_senators, R.string.ottawa_senators_slug, R.string.nhl, R.drawable.nhl_ottawa),
+            new Team(R.string.buffalo_sabres, R.string.buffalo_sabres_slug, R.string.nhl, R.drawable.nhl_buffalo)
     };
 }
