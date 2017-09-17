@@ -71,6 +71,7 @@
     <string name="nba">NBA</string>
     <string name="nhl">NHL</string>
     <string name="mlb">MLB</string>
+    <string name="nfl">NFL</string>
 
     <!--Twitter list owner-->
     <string name="twitter_list_owner">MDias9</string>

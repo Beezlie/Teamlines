@@ -2,8 +2,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="mdd.teamlines.MainActivity" >
+
+    <item
+        android:id="@+id/baseball"
+        android:icon="@drawable/baseball"
+        android:title="@string/mlb"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/hockey"
+        android:icon="@drawable/hockey"
+        android:title="@string/nhl"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/basketball"
+        android:icon="@drawable/basketball"
+        android:title="@string/nba"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/football"
+        android:icon="@drawable/football"
+        android:title="@string/nfl"
+        app:showAsAction="ifRoom"/>
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
 </menu>
