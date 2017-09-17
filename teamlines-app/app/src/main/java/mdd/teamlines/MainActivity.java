@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -43,7 +44,35 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //team name, league, team logo image resource
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.baseball:
+                //newGame();
+                return true;
+            case R.id.hockey:
+                //showHelp();
+                return true;
+            case R.id.basketball:
+                //showHelp();
+                return true;
+            case R.id.football:
+                //showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    //team name, twitter list slug, league, team logo image resource
     private Team[] teams = {
             new Team(R.string.arizona_diamondbacks, R.string.arizona_diamondbacks_slug, R.string.mlb, R.drawable.mlb_arizona),
             new Team(R.string.atlanta_braves, R.string.atlanta_braves_slug, R.string.mlb, R.drawable.mlb_atlanta),
