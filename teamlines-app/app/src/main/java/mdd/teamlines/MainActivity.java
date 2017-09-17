@@ -16,7 +16,12 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String currentLeagueSelectedKey = "currentLeagueSelectedKey";
+    private static String league = "MLB";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +30,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        setSportView(mlbteams);
+        HashMap<String, Team[]> hmap = new HashMap<>();
+        hmap.put("MLB", mlbteams);
+        hmap.put("NHL", nhlteams);
+        hmap.put("NBA", nbateams);
+
+        setSportView(hmap.get(league));
     }
 
     @Override
@@ -41,16 +51,34 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.baseball:
                 setSportView(mlbteams);
+                league = "MLB";
                 return true;
             case R.id.hockey:
                 setSportView(nhlteams);
+                league = "NHL";
                 return true;
             case R.id.basketball:
+                setSportView(nbateams);
+                league = "NBA";
                 return true;
             case R.id.football:
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(currentLeagueSelectedKey, league);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            league = savedInstanceState.getString(currentLeagueSelectedKey);
         }
     }
 
@@ -112,5 +140,10 @@ public class MainActivity extends AppCompatActivity {
     private Team[] nhlteams = {
             new Team(R.string.ottawa_senators, R.string.ottawa_senators_slug, R.string.nhl, R.drawable.nhl_ottawa),
             new Team(R.string.buffalo_sabres, R.string.buffalo_sabres_slug, R.string.nhl, R.drawable.nhl_buffalo)
+    };
+
+    private Team[] nbateams = {
+            new Team(R.string.atlanta_hawks, R.string.atlanta_hawks_slug, R.string.nba, R.drawable.nba_atlanta),
+            new Team(R.string.boston_celtics, R.string.boston_celtics_slug, R.string.nba, R.drawable.nba_boston)
     };
 }
