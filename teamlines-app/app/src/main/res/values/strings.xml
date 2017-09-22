@@ -2,6 +2,10 @@
     <string name="app_name">Teamlines</string>
     <string name="action_settings">Settings</string>
 
+    <!--twitter OAUTH Keys
+    <string name="CONSUMER_KEY"></string>
+    <string name="CONSUMER_SECRET"></string>
+    -->
 
     <!--MLB team names-->
     <string name="arizona_diamondbacks">Arizona Diamondbacks</string>
@@ -66,6 +70,78 @@
     <string name="texas_rangers_slug">texas-rangers</string>
     <string name="toronto_blue_jays_slug">toronto-blue-jays</string>
     <string name="washington_nationals_slug">washington-nationals</string>
+
+    <!--NHL team names-->
+    <string name="ottawa_senators">Ottawa Senators</string>
+    <string name="buffalo_sabres">Buffalo Sabres</string>
+
+    <!--NHL twitter list slugs-->
+    <string name="ottawa_senators_slug">ottawa-senators</string>
+    <string name="buffalo_sabres_slug">buffalo-sabres</string>
+
+    <!--NBA team names-->
+    <string name="atlanta_hawks">Atlanta Hawks</string>
+    <string name="boston_celtics">Boston Celtics</string>
+    <string name="brooklyn_nets">Brooklyn Nets</string>
+    <string name="charlotte_hornets">Charlotte Hornets</string>
+    <string name="chicago_bulls">Chicago Bulls</string>
+    <string name="cleveland_cavaliers">Cleveland Cavaliers</string>
+    <string name="dallas_mavericks">Dallas Mavericks</string>
+    <string name="denver_nuggets">Denver Nuggets</string>
+    <string name="detroit_pistons">Detroit Pistons</string>
+    <string name="golden_state_warriors">Golden State Warriors</string>
+    <string name="houston_rockets">Houston Rockets</string>
+    <string name="indiana_pacers">Indiana Pacers</string>
+    <string name="los_angeles_clippers">Los Angeles Clippers</string>
+    <string name="los_angeles_lakers">Los Angeles Lakers</string>
+    <string name="memphis_grizzlies">Memphis Grizzlies</string>
+    <string name="miami_heat">Miami Heat</string>
+    <string name="milwaukee_bucks">Milwaukee Bucks</string>
+    <string name="minnesota_timberwolves">Minnesota Timberwolves</string>
+    <string name="new_orleans_pelicans">New Orleans Pelicans</string>
+    <string name="new_york_knicks">New York Knicks</string>
+    <string name="oklahoma_city_thunder">Oklahoma City Thunder</string>
+    <string name="orlando_magic">Orlando Magic</string>
+    <string name="philadelphia_76ers">Philadelphia 76ers</string>
+    <string name="phoenix_suns">Phoenix Suns</string>
+    <string name="portland_trail_blazers">Portland Trail Blazers</string>
+    <string name="sacramento_kings">Sacramento Kings</string>
+    <string name="san_antonio_spurs">San Antonio Spurs</string>
+    <string name="toronto_raptors">Toronto Raptors</string>
+    <string name="utah_jazz">Utah Jazz</string>
+    <string name="washington_wizards">Washington Wizards</string>
+
+    <!--NBA twitter list slugs-->
+    <string name="atlanta_hawks_slug">atlanta-hawks</string>
+    <string name="boston_celtics_slug">boston-celtics</string>
+    <string name="brooklyn_nets_slug">brooklyn-nets</string>
+    <string name="charlotte_hornets_slug">charlotte-hornets</string>
+    <string name="chicago_bulls_slug">chicago-bulls</string>
+    <string name="cleveland_cavaliers_slug">cleveland-cavaliers</string>
+    <string name="dallas_mavericks_slug">dallas-mavericks</string>
+    <string name="denver_nuggets_slug">denver-nuggets</string>
+    <string name="detroit_pistons_slug">detroit-pistons</string>
+    <string name="golden_state_warriors_slug">golden-state-warriors</string>
+    <string name="houston_rockets_slug">houston-rockets</string>
+    <string name="indiana_pacers_slug">indiana-pacers</string>
+    <string name="los_angeles_clippers_slug">los-angeles-clippers</string>
+    <string name="los_angeles_lakers_slug">los-angeles-lakers</string>
+    <string name="memphis_grizzlies_slug">memphis-grizzlies</string>
+    <string name="miami_heat_slug">miami-heat</string>
+    <string name="milwaukee_bucks_slug">milwaukee-bucks</string>
+    <string name="minnesota_timberwolves_slug">minnesota-timberwolves</string>
+    <string name="new_orleans_pelicans_slug">new-orleans-pelicans</string>
+    <string name="new_york_knicks_slug">new-york-knicks</string>
+    <string name="oklahoma_city_thunder_slug">oklahoma-city-thunder</string>
+    <string name="orlando_magic_slug">orlando-magic</string>
+    <string name="philadelphia_76ers_slug">philadelphia-76ers</string>
+    <string name="phoenix_suns_slug">phoenix-suns</string>
+    <string name="portland_trail_blazers_slug">portland-trail-blazers</string>
+    <string name="sacramento_kings_slug">sacramento-kings</string>
+    <string name="san_antonio_spurs_slug">san-antonio-spurs</string>
+    <string name="toronto_raptors_slug">toronto-raptors</string>
+    <string name="utah_jazz_slug">utah-jazz</string>
+    <string name="washington_wizards_slug">washington-wizards</string>
 
     <!--Leagues-->
     <string name="nba">NBA</string>
