@@ -144,6 +144,34 @@ public class MainActivity extends AppCompatActivity {
 
     private Team[] nbateams = {
             new Team(R.string.atlanta_hawks, R.string.atlanta_hawks_slug, R.string.nba, R.drawable.nba_atlanta),
-            new Team(R.string.boston_celtics, R.string.boston_celtics_slug, R.string.nba, R.drawable.nba_boston)
+            new Team(R.string.boston_celtics, R.string.boston_celtics_slug, R.string.nba, R.drawable.nba_boston),
+            new Team(R.string.brooklyn_nets, R.string.brooklyn_nets_slug, R.string.nba, R.drawable.nba_brooklyn),
+            new Team(R.string.charlotte_hornets, R.string.charlotte_hornets_slug, R.string.nba, R.drawable.nba_charlotte),
+            new Team(R.string.chicago_bulls, R.string.chicago_bulls_slug, R.string.nba, R.drawable.nba_chicago),
+            new Team(R.string.cleveland_cavaliers, R.string.cleveland_cavaliers_slug, R.string.nba, R.drawable.nba_cleveland),
+            new Team(R.string.dallas_mavericks, R.string.dallas_mavericks_slug, R.string.nba, R.drawable.nba_dallas),
+            new Team(R.string.denver_nuggets, R.string.denver_nuggets_slug, R.string.nba, R.drawable.nba_denver),
+            new Team(R.string.detroit_pistons, R.string.detroit_pistons_slug, R.string.nba, R.drawable.nba_detroit),
+            new Team(R.string.golden_state_warriors, R.string.golden_state_warriors_slug, R.string.nba, R.drawable.nba_goldenstate),
+            new Team(R.string.houston_rockets, R.string.houston_rockets_slug, R.string.nba, R.drawable.nba_houston),
+            new Team(R.string.indiana_pacers, R.string.indiana_pacers_slug, R.string.nba, R.drawable.nba_indiana),
+            new Team(R.string.los_angeles_clippers, R.string.los_angeles_clippers_slug, R.string.nba, R.drawable.nba_losangelesclippers),
+            new Team(R.string.los_angeles_lakers, R.string.los_angeles_lakers_slug, R.string.nba, R.drawable.nba_losangeleslakers),
+            new Team(R.string.memphis_grizzlies, R.string.memphis_grizzlies_slug, R.string.nba, R.drawable.nba_memphis),
+            new Team(R.string.miami_heat, R.string.miami_heat_slug, R.string.nba, R.drawable.nba_miami),
+            new Team(R.string.milwaukee_bucks, R.string.milwaukee_bucks_slug, R.string.nba, R.drawable.nba_milwaukee),
+            new Team(R.string.minnesota_timberwolves, R.string.minnesota_timberwolves_slug, R.string.nba, R.drawable.nba_minnesota),
+            new Team(R.string.new_orleans_pelicans, R.string.new_orleans_pelicans_slug, R.string.nba, R.drawable.nba_neworleans),
+            new Team(R.string.new_york_knicks, R.string.new_york_knicks_slug, R.string.nba, R.drawable.nba_newyork),
+            new Team(R.string.oklahoma_city_thunder, R.string.oklahoma_city_thunder_slug, R.string.nba, R.drawable.nba_oklahoma),
+            new Team(R.string.orlando_magic, R.string.orlando_magic_slug, R.string.nba, R.drawable.nba_orlando),
+            new Team(R.string.philadelphia_76ers, R.string.philadelphia_76ers_slug, R.string.nba, R.drawable.nba_philadelphia),
+            new Team(R.string.phoenix_suns, R.string.phoenix_suns_slug, R.string.nba, R.drawable.nba_phoenix),
+            new Team(R.string.portland_trail_blazers, R.string.portland_trail_blazers_slug, R.string.nba, R.drawable.nba_portland),
+            new Team(R.string.sacramento_kings, R.string.sacramento_kings_slug, R.string.nba, R.drawable.nba_sacramento),
+            new Team(R.string.san_antonio_spurs, R.string.san_antonio_spurs_slug, R.string.nba, R.drawable.nba_sanantonio),
+            new Team(R.string.toronto_raptors, R.string.toronto_raptors_slug, R.string.nba, R.drawable.nba_toronto),
+            new Team(R.string.utah_jazz, R.string.utah_jazz_slug, R.string.nba, R.drawable.nba_utah),
+            new Team(R.string.washington_wizards, R.string.washington_wizards_slug, R.string.nba, R.drawable.nba_washington)
     };
 }
